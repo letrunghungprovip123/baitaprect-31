@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./../public/glassesImage/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  /* Độ mờ */
+  z-index: -1;
+  /* Đưa hình nền ra phía sau */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.model-content .img-desc {
+  position: relative;
+}
+
+.model-content .img-desc .glasses {
+  position: absolute;
+  top: 78px;
+  left: 55px;
+}
+
+.model-content .img-desc .desc {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(247, 138, 4, 0.496);
+  padding-left: 10px;
+}
+
+.model-content .img-desc .desc h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: blueviolet;
+}
+
+.model-content .img-desc .desc p {
+  opacity: 0.5;
+}
